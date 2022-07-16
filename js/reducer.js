@@ -30,7 +30,9 @@ const actions = {
     destroy({todoList}, index) {
         todoList.splice(index,1)
         storage.set(todoList)
-
+    },
+    switchStatus(state, filter) {
+        state.filter = filter
     }
 }
 export default function reducer(state = init, action, args) {
